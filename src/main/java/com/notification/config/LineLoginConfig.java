@@ -32,7 +32,7 @@ public class LineLoginConfig {
                 		.clientSecret("47f150bc731eddf7cd48ebe9faff738e")
 				.clientAuthenticationMethod(ClientAuthenticationMethod.BASIC)
 				.authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-				.redirectUriTemplate("{baseUrl}/login/oauth2/code/{registrationId}").scope("profile")
+				.redirectUri("{baseUrl}/login/oauth2/code/{registrationId}").scope("profile")
 				.authorizationUri("https://access.line.me/oauth2/v2.1/authorize")
 				.tokenUri("https://api.line.me/oauth2/v2.1/token").userNameAttributeName("userId")
 				.userInfoUri("https://api.line.me/v2/profile").clientName("LINE").build();
