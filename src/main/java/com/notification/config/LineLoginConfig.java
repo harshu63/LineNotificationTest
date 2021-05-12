@@ -28,8 +28,8 @@ public class LineLoginConfig {
 	}
 
 	private ClientRegistration lineClientRegistration() {
-		return ClientRegistration.withRegistrationId("line").clientId("1655981933")
-                		.clientSecret("e47ac643b3c92f785eafc34d69fc40b5")
+		return ClientRegistration.withRegistrationId("line").clientId("1655982013")
+                		.clientSecret("47f150bc731eddf7cd48ebe9faff738e")
 				.clientAuthenticationMethod(ClientAuthenticationMethod.BASIC)
 				.authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
 				.redirectUriTemplate("{baseUrl}/login/oauth2/code/{registrationId}").scope("profile")
