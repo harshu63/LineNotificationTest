@@ -28,11 +28,11 @@ public class LineLoginConfig {
 	}
 
 	private ClientRegistration lineClientRegistration() {
-		return ClientRegistration.withRegistrationId("line").clientId("1655969000")
-                		.clientSecret("1a77c489c1f7fd9e5616b4157c3b2a0c")
+		return ClientRegistration.withRegistrationId("line").clientId("1655981933")
+                		.clientSecret("e47ac643b3c92f785eafc34d69fc40b5")
 				.clientAuthenticationMethod(ClientAuthenticationMethod.BASIC)
 				.authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-				.redirectUriTemplate("https://linenotifytesting.herokuapp.com/").scope("profile")
+				.redirectUriTemplate("{baseUrl}/login/oauth2/code/{registrationId}").scope("profile")
 				.authorizationUri("https://access.line.me/oauth2/v2.1/authorize")
 				.tokenUri("https://api.line.me/oauth2/v2.1/token").userNameAttributeName("userId")
 				.userInfoUri("https://api.line.me/v2/profile").clientName("LINE").build();
