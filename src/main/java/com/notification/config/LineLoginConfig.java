@@ -39,7 +39,7 @@ public class LineLoginConfig {
                 		.clientSecret(clientSecret)
 				.clientAuthenticationMethod(ClientAuthenticationMethod.BASIC)
 				.authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-				.redirectUri("{baseUrl}/login/oauth2/code/{registrationId}").scope("profile")
+				.redirectUri("https://linenotifytesting.herokuapp.com/login/oauth2/code/line").scope("profile")
 				.authorizationUri("https://access.line.me/oauth2/v2.1/authorize")
 				.tokenUri("https://api.line.me/oauth2/v2.1/token").userNameAttributeName("userId")
 				.userInfoUri("https://api.line.me/v2/profile").clientName("LINE").build();
