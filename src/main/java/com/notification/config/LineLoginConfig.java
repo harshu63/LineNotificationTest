@@ -13,6 +13,12 @@ import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
 
 @Configuration
 public class LineLoginConfig {
+	
+	@Value("${line.login.client-id}")
+    	private String clientId;
+	
+	@Value("${line.login.client_secret}")
+    	private String clientSecret;
 
 	@EnableWebSecurity
 	public class LineLoginSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -28,8 +34,8 @@ public class LineLoginConfig {
 	}
 
 	private ClientRegistration lineClientRegistration() {
-		return ClientRegistration.withRegistrationId("line").clientId("1655982013")
-                		.clientSecret("47f150bc731eddf7cd48ebe9faff738e")
+		return ClientRegistration.withRegistrationId("line").clientId(clientId)
+                		.clientSecret(clientSecret)
 				.clientAuthenticationMethod(ClientAuthenticationMethod.BASIC)
 				.authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
 				.redirectUri("{baseUrl}/login/oauth2/code/{registrationId}").scope("profile")
