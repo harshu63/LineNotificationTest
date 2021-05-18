@@ -2,7 +2,7 @@ server:
   port: 9089
   
 line.login:
-  client_id: '1655969000'
-  client_secret: '1a77c489c1f7fd9e5616b4157c3b2a0c'
+  client_id: '1655982013'
+  client_secret: '47f150bc731eddf7cd48ebe9faff738e'
 
 
