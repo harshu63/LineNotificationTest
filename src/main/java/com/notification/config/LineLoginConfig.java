@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Value;
 @Configuration
 public class LineLoginConfig {
 	
-	@Value("${line.login.client-id}")
+	@Value("${line.login.client_id}")
     	private String clientId;
 	
 	@Value("${line.login.client_secret}")
